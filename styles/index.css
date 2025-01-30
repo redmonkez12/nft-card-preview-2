@@ -103,11 +103,11 @@ p {
     justify-content: space-between;
 }
 
-.price div:first-child {
+.price > div:first-child {
     color: var(--cyan);
 }
 
-.price div:last-child {
+.price > div:last-child {
     color: var(--text-color);
 }
 
