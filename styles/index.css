@@ -1,27 +1,23 @@
-/* Import font with only needed weights to reduce load time */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap');
 
-/* CSS Custom Properties - moved to html for better cascade */
-html {
-    --cyan: #00FFF7;
+:root {
+    --cyan: #00fff7;
     --white: #fff;
-    --bg-main: #0D192B;
-    --bg-card: #14253D;
-    --color-hover: #00FFF8;
-    --text-color: #8BACD9;
-    --bg-dark: #2E405A;
+    --bg-main: #0d192b;
+    --bg-card: #14253d;
+    --color-hover: #00fff8;
+    --text-color: #8bacd9;
+    --bg-dark: #2e405a;
 }
 
-/* Combined reset styles */
 *,
-*::before,
-*::after {
+::after,
+::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Base styles with shorthand properties */
 body {
     min-height: 100vh;
     font: 18px 'Outfit', sans-serif;
@@ -48,7 +44,6 @@ p {
     line-height: 1.5;
 }
 
-/* Component styles */
 .card {
     border-radius: 1rem;
     background-color: var(--bg-card);
@@ -80,6 +75,10 @@ p {
     opacity: 0.5;
 }
 
+.nft:hover .hover-icon {
+    opacity: 1;
+}
+
 .hover-icon {
     position: absolute;
     top: 50%;
@@ -91,11 +90,6 @@ p {
     transition: opacity .5s ease;
 }
 
-.nft:hover .hover-icon {
-    opacity: 1;
-}
-
-/* Layout components */
 .content {
     margin-top: 1.5rem;
     display: flex;
@@ -111,6 +105,10 @@ p {
 
 .price div:first-child {
     color: var(--cyan);
+}
+
+.price div:last-child {
+    color: var(--text-color);
 }
 
 .row-info {
@@ -143,7 +141,6 @@ p {
     aspect-ratio: 1;
 }
 
-/* Utilities */
 .text-hover:hover {
     color: var(--color-hover);
     cursor: pointer;
